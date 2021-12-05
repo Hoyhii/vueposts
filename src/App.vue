@@ -1,17 +1,16 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <blog :posts="posts" @post-item-changed="Changed"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import blog from './components/VueBlog.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    blog
   },
   data() {
     return {
